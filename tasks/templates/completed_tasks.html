@@ -1,0 +1,10 @@
+<h1>Task management</h1>
+
+<h2>Completed Tasks</h2>
+<a href="{% url 'all-tasks' %}">View all tasks</a>
+
+{% for task in tasks %}
+<li>
+    <a href="{% url 'view-task' task.id %}">{{ task.title }}</a>
+</li>
+{% endfor %}
